@@ -30,6 +30,11 @@ var gameState = "notStarted", //started // ended
 
 function setGameElements() {
 	switch (gameState) {
+		default:
+		newGameElem.style.display = "block";
+		pickElem.style.display = "none";
+		resultsElem.style.display = "none";
+	break;
 		case "notStarted":
 		newGameElem.style.display = "block";
 		pickElem.style.display = "none";
