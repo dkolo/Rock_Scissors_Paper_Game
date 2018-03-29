@@ -121,14 +121,14 @@ function playerPick(playerPick) {
 
 // Solution of task 9.7 in lines 118 - 135
 function endGame() {
-	if (player.score == 10) {
+	if (player.score === 10) {
 		playerResultElem.innerHTML = player.name + " wins the game!";
 		computerResultElem.innerHTML = "Computer looses!";
 		gameState = "ended";
 		computer.score = player.score = 0;
 		alert('You win! Congratulations :-)');
 	}
-  else if (computer.score == 10) {
+  else if (computer.score === 10) {
 		playerResultElem.innerHTML = player.name + " looses!";
 		computerResultElem.innerHTML = "Computer wins the game!";
 		gameState = "ended";
