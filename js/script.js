@@ -81,23 +81,23 @@ function checkRoundWinner(playerPick, computerPick) {
 
 	var winnerIs = "player";
 
-	if (playerPick == computerPick) {
+	if (playerPick === computerPick) {
 		winnerIs = "noone"; // remis
 	} else if (
-    	(computerPick == "Rock" && playerPick == "Scissors") ||
-    	(computerPick == "Scissors" && playerPick == "Paper") ||
-    	(computerPick == "Paper" && playerPick == "Rock")
+    	(computerPick === "Rock" && playerPick === "Scissors") ||
+    	(computerPick === "Scissors" && playerPick === "Paper") ||
+    	(computerPick === "Paper" && playerPick === "Rock")
 	) {
 		winnerIs = "computer";
 	}
   
-  	if (winnerIs == "player") {
+  	if (winnerIs === "player") {
 		playerResultElem.innerHTML = "Wins!";
 		player.score++;
-	} else if (winnerIs == "computer") {
+	} else if (winnerIs === "computer") {
     	computerResultElem.innerHTML = "Wins!";
     	computer.score++;
-	} else if (winnerIs == "noone") { //Added by me
+	} else if (winnerIs === "noone") { //Added by me
   		playerResultElem.innerHTML = "Draw xD";
     	computerResultElem.innerHTML = "Draw xD";
 	}
